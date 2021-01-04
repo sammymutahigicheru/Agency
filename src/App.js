@@ -1,9 +1,15 @@
 import PageWrapper from './components/PageWrapper';
 import Home from './components/pages/Home';
+import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 function App() {
   return (
     <PageWrapper>
-      <Home />
+      <Router>
+        <Route
+          pathv="/home"
+          component={Home}
+        />
+      </Router>
     </PageWrapper>
   );
 }
