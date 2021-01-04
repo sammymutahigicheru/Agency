@@ -25,6 +25,9 @@ class Contact extends Component{
             message: ''
         }
     }
+    submitForm = (e) =>{
+        alert("Form Submitted!! Thank You");
+    }
     render(){
         return (
             <section className="page-section" id="contact">
@@ -54,7 +57,11 @@ class Contact extends Component{
                     </div>
                     <div className="text-center">
                         <div id="success"></div>
-                        <button className="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                        <button className="btn btn-primary btn-xl text-uppercase" 
+                        id="sendMessageButton"
+                         type="submit"
+                         onClick = {e => this.submitForm}
+                         >Send Message</button>
                     </div>
                 </form>
             </div>
