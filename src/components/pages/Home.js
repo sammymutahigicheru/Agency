@@ -1,16 +1,17 @@
 import React,{ Component } from "react";
 import Header from '../common/Header';
+import image from '../assets/img/header-bg.jpg';
 class Home extends Component{
     render(){
         return(
             <div>
               <Header 
-              title = "Welcome To Our Studio!"
-              subtitle = "It's Nice To Meet You"
+              title = "About Us"
+              subtitle = "It's really a great story"
               buttonText = "Tell Me More"
               link = "/services"
-              showButton = {true}
-              image = '../assets/img/header-bg.jpg'
+              showButton = {false}
+              image = {image}
               />  
             </div>
         );

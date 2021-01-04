@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../common/Header';
+import image from '../assets/img/header-bg.jpg';
 class About extends Component{
     render(){
         return (
@@ -10,7 +11,7 @@ class About extends Component{
                     buttonText = "Tell Me More"
                     link = "/services"
                     showButton = {true}
-                    image = '../assets/img/header-bg.jpg'
+                    image = {image}
                  /> 
                 <section className="page-section" id="about">
                     <div className="container">
