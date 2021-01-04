@@ -10,6 +10,7 @@ class Home extends Component{
               buttonText = "Tell Me More"
               link = "/services"
               showButton = {true}
+              image = '../assets/img/header-bg.jpg'
               />  
             </div>
         );
