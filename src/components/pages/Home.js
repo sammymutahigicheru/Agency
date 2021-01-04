@@ -3,19 +3,22 @@ import Header from '../common/Header';
 import image from '../assets/img/header-bg.jpg';
 //Reusable components
 import Service from '../pages/Service';
+import Portfolio from "./Portfolio";
+import About from "./About";
 class Home extends Component{
     render(){
         return(
             <div>
               <Header 
-              title = "About Us"
-              subtitle = "It's really a great story"
+              title = "Welcome To Our Studio!"
+              subtitle = "We're Really Awesome"
               buttonText = "Tell Me More"
-              link = "/services"
-              showButton = {false}
+              link = "/service"
+              showButton = {true}
               image = {image}
               />  
               <Service />
+              <Portfolio />
             </div>
         );
     }

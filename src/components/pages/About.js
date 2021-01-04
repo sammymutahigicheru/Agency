@@ -6,11 +6,11 @@ class About extends Component{
         return (
             <div>
                 <Header 
-                    title = "Welcome To Our Studio!"
-                    subtitle = "It's Nice To Meet You"
+                    title = "About Us"
+                    subtitle = "It's Really a great story"
                     buttonText = "Tell Me More"
                     link = "/services"
-                    showButton = {true}
+                    showButton = {false}
                     image = {image}
                  /> 
                 <section className="page-section" id="about">
