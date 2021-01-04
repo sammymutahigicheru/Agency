@@ -1,16 +1,16 @@
 import React,{ Component } from "react";
-
+import Header from '../common/Header';
 class Home extends Component{
     render(){
         return(
             <div>
-                <header className="masthead">
-                    <div className="container">
-                        <div className="masthead-subheading">Welcome To Our Studio!</div>
-                        <div className="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                        <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-                    </div>
-                </header>
+              <Header 
+              title = "Welcome To Our Studio!"
+              subtitle = "It's Nice To Meet You"
+              buttonText = "Tell Me More"
+              link = "/services"
+              showButton = {true}
+              />  
             </div>
         );
     }
