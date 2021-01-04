@@ -29,7 +29,7 @@ class Contact extends Component{
                     <h2 className="section-heading text-uppercase">Contact Us</h2>
                     <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form id="contactForm" onSubmit={e => this.submitForm} name="sentMessage">
                     <div className="row align-items-stretch mb-5">
                            {fields.sections.map((section,sectionIndex) =>{
                                return (
@@ -38,6 +38,9 @@ class Contact extends Component{
                                         return <Field 
                                         {...field}
                                         key={i}
+                                        value = {this.props.values[field.name]}
+                                        name = {field.name}
+                                        onChange = {this.props.handleChange}
                                         />
                                     })}
                                 </div>
