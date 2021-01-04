@@ -13,7 +13,7 @@ class SinglePortfolio extends Component{
                             </a>
                             <div className="portfolio-caption">
                                 <div className="portfolio-caption-heading">{this.props.title}</div>
-                                <div className="portfolio-caption-subheading text-muted">{this.props.description}</div>
+                                <div className="portfolio-caption-subheading text-muted">{this.props.subtitle}</div>
                             </div>
                         </div>
                     </div>
