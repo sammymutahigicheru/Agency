@@ -3,7 +3,7 @@ import {withFormik} from 'formik';
 import Field from '../common/Field';
 import * as Yup from 'yup';
 
-const field = [
+const fields = [
     {name: 'email',elementName: 'input',type:'email',placeholder: 'Your Email'},
     {name: 'password',elementName: 'input',type: 'password',placeholder: 'Your Password'}
 ]
@@ -11,7 +11,36 @@ const field = [
 class Login extends Component{
     render(){
         return(
-            <h1>Login</h1>
+            <div className= "login-page">
+                <div className="container">
+                    <div className="login-form">
+                        <div className="row">
+                            <h1>Login</h1>
+                        </div>
+                        <div className="row">
+                            {fields.map(
+                                (f,i) =>{
+                                    <div className="col-md-12"></div>
+                                    return (
+                                        <div className="col-md-12">
+                                             <Field 
+                                                key = {i}
+                                                {...f}
+                                                value = {this.props.values[f.name]}
+                                                name = {f.name}
+                                                onChange = {this.props.handleChange}
+                                                onBlur = {this.props.handleBlur}
+                                                touched = {this.props.touched[f.name]}
+                                                errors = {this.props.errors[f.name]}
+                                             />
+                                        </div>
+                                   )
+                                }
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
