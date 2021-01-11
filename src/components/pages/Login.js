@@ -18,6 +18,7 @@ class Login extends Component{
                             <h1>Login</h1>
                         </div>
                         <div className="row">
+                        <form onSubmit={this.props.handleSubmit}>
                             {fields.map(
                                 (f,i) =>{
                                     <div className="col-md-12"></div>
@@ -37,6 +38,10 @@ class Login extends Component{
                                    )
                                 }
                             )}
+                            <div className="col-md-12">
+                                <button className="btn btn-primary">Login</button>
+                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
