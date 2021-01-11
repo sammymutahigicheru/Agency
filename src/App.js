@@ -13,32 +13,36 @@ function App() {
 
       <Route 
       path = "/admin"
-      render = {props =>{
-        <Login />
-      }}
+      render = {props =>(
+        <AdminWrapper>
+           <Login />
+        </AdminWrapper>
+       
+      )}
       />
-
-
-
-      <PageWrapper>
 
         <Route
           exact = {true}
           path="/"
-          component={Home}
+          render={props =>(
+           <Home {...props} />
+            )}
         />
 
         <Route
           path="/about"
-          component={About}
+          render={props =>(
+            <About {...props} />
+             )}
        />
 
        <Route 
        path = "/contact"
-       component = {Contact}
+       render={props =>(
+        <Contact {...props} />
+         )}
       />
   
-      </PageWrapper>
     </Router>
     
   );
