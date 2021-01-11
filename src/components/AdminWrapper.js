@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './assets/css/admin.css';
 class AdminWrapper extends Component{
     render(){
         return(
