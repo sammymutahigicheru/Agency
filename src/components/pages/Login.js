@@ -3,6 +3,7 @@ import {withFormik} from 'formik';
 import {connect} from 'react-redux';
 import Field from '../common/Field';
 import * as Yup from 'yup';
+import * as AuthActions from '../../store/actions/authActions';
 
 const fields = [
     {name: 'email',elementName: 'input',type:'email',placeholder: 'Your Email'},
