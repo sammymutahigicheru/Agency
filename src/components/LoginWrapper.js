@@ -1,16 +1,9 @@
-import AppBar from '@material-ui/core/AppBar';
-import  Toolbar from '@material-ui/core/Toolbar';
 import React, {Component} from 'react';
 import './assets/css/admin.css';
 class LoginWrapper extends Component{
     render(){
         return(
             <div id="admin-page">
-                <AppBar>
-                    <Toolbar>
-
-                    </Toolbar>
-                </AppBar>
                 {this.props.children}
             </div>
         )

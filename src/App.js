@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import AdminWrapper from './components/AdminWrapper';
 import Dashboard from './components/pages/Dashboard';
 import React, { Component } from 'react';
+import LoginWrapper from './components/LoginWrapper';
 
 class App extends Component {
   render(){
@@ -18,10 +19,21 @@ class App extends Component {
         path = "/admin"
         render = {props =>{
           return (
-            <AdminWrapper>
-              {this.props.auth.token ? 
-              < Dashboard /> : <Login /> }
-          </AdminWrapper>
+            <div>
+              
+              {this.props.auth.token ?
+              <AdminWrapper>
+                < Dashboard />
+              </AdminWrapper>
+
+              :
+              <LoginWrapper>
+                 <Login />
+              </LoginWrapper>
+              
+                }
+            </div>
+            
          
           )
         }}
