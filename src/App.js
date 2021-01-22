@@ -4,8 +4,10 @@ import About from './components/pages/About';
 import { BrowserRouter as Router, Route,Link } from "react-router-dom";
 import Contact from './components/pages/Contact';
 import Login from './components/pages/Login';
+import { connect } from 'react-redux';
 
 import AdminWrapper from './components/AdminWrapper';
+import Dashboard from './components/pages/Dashboard';
 
 function App() {
   return (
@@ -13,12 +15,15 @@ function App() {
 
       <Route 
       path = "/admin"
-      render = {props =>(
-        <AdminWrapper>
-           <Login />
+      render = {props =>{
+        return (
+          <AdminWrapper>
+            {props.auth ? 
+            < Dashboard /> : <Login /> }
         </AdminWrapper>
        
-      )}
+        )
+      }}
       />
 
         <Route
@@ -48,4 +53,20 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state =>{
+  return {
+   auth: state.auth
+  }
+}
+
+const mapDispatchToProps = dispatch =>{
+  return {
+
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
+
