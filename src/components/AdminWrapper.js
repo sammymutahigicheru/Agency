@@ -16,6 +16,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import Divider from '@material-ui/core/Divider';
+import Sidebar from './common/Sidebar';
 
 const drawerWidth = 240;
 
@@ -116,11 +117,7 @@ class AdminWrapper extends Component{
                         </IconButton>
                     </div>
                     <Divider />
-                    <List>
-                        <ListItem>
-                            Dashboard
-                        </ListItem>
-                    </List>
+                    <Sidebar />
                 </Drawer>
                 {this.props.children}
             </div>
