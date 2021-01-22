@@ -2,7 +2,7 @@ import AppBar from '@material-ui/core/AppBar';
 import  Toolbar from '@material-ui/core/Toolbar';
 import React, {Component} from 'react';
 import './assets/css/admin.css';
-class AdminWrapper extends Component{
+class LoginWrapper extends Component{
     render(){
         return(
             <div id="admin-page">
@@ -16,4 +16,4 @@ class AdminWrapper extends Component{
         )
     }
 }
-export default AdminWrapper;
+export default LoginWrapper;

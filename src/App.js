@@ -8,49 +8,52 @@ import { connect } from 'react-redux';
 
 import AdminWrapper from './components/AdminWrapper';
 import Dashboard from './components/pages/Dashboard';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <Router>
-
-      <Route 
-      path = "/admin"
-      render = {props =>{
-        return (
-          <AdminWrapper>
-            {props.auth ? 
-            < Dashboard /> : <Login /> }
-        </AdminWrapper>
-       
-        )
-      }}
-      />
-
-        <Route
-          exact = {true}
-          path="/"
-          render={props =>(
-           <Home {...props} />
-            )}
+class App extends Component {
+  render(){
+    return (
+      <Router>
+        <Route 
+        path = "/admin"
+        render = {props =>{
+          return (
+            <AdminWrapper>
+              {this.props.auth.token ? 
+              < Dashboard /> : <Login /> }
+          </AdminWrapper>
+         
+          )
+        }}
         />
-
-        <Route
-          path="/about"
-          render={props =>(
-            <About {...props} />
-             )}
-       />
-
-       <Route 
-       path = "/contact"
-       render={props =>(
-        <Contact {...props} />
-         )}
-      />
   
-    </Router>
+          <Route
+            exact = {true}
+            path="/"
+            render={props =>(
+             <Home {...props} />
+              )}
+          />
+  
+          <Route
+            path="/about"
+            render={props =>(
+              <About {...props} />
+               )}
+         />
+  
+         <Route 
+         path = "/contact"
+         render={props =>(
+          <Contact {...props} />
+           )}
+        />
     
-  );
+      </Router>
+      
+    );
+  }
+  
 }
 
 const mapStateToProps = state =>{
