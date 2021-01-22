@@ -45,7 +45,19 @@ const styles = theme => ({
     drawerPaper: {
         position: 'relative',
         whiteSpace: 'noWrap',
-        width: drawerWidth
+        width: drawerWidth,
+        transition: theme.transitions.create('width',{
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.enteringScreen
+        })
+    },
+    drawerPaperClose: {
+        overflowx: 'hidden',
+        width: theme.spacing.unit * 7,
+        transition: theme.transitions.create('width',{
+            easing: theme.transitions.easing.sharp,
+            duration: theme.transitions.duration.leavingScreen
+        })
     },
     toolbarIcon: {
         display: 'flex',
@@ -92,7 +104,7 @@ class AdminWrapper extends Component{
                 </AppBar>
                 <Drawer classes = {
                 {
-                    paper: classes.drawerPaper
+                    paper: classNames(classes.drawerPaper,!this.state.open && classes.drawerPaperClose)
                 }
                 }
                 variant = "permanent"
