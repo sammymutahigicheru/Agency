@@ -29,7 +29,7 @@ class Sidebar extends Component{
                         <ListItemText primary="Dashboard" />
                     
                 </ListItemLink>
-                <ListItemLink to="admin/posts" button>
+                <ListItemLink to="/admin/posts" button>
                  
                  <ListItemIcon>
                         <FileCopyIcon />
@@ -37,7 +37,7 @@ class Sidebar extends Component{
                     <ListItemText primary="Posts" />     
                
                 </ListItemLink>
-                <ListItemLink to="admin/users" button>
+                <ListItemLink to="/admin/users" button>
                     
                         <ListItemIcon>
                             <FaceIcon />
