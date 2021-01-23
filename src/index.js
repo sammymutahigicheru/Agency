@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import rootReducer from './store/reducers';
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import thunk from 'redux-thunk';
-import {store,persistor} from './store/ConfigureStore';
 import {PersistGate} from 'redux-persist/integration/react';
+import configureStore from './store/ConfigureStore';
+const {store,persistor} = configureStore();
 
 ReactDOM.render(
     <Provider store={store} >
