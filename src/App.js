@@ -10,11 +10,23 @@ import AdminWrapper from './components/AdminWrapper';
 import Dashboard from './components/pages/Dashboard';
 import React, { Component } from 'react';
 import LoginWrapper from './components/LoginWrapper';
+import Users from './components/pages/admin/Users';
+import Posts from './components/pages/admin/Posts';
 
 class App extends Component {
   render(){
     return (
       <Router>
+        <Route 
+        path = "/admin/users"
+        component = {Users}
+        />
+
+        <Route 
+        path = "/admin/posts"
+        component = {Posts}
+        />
+
         <Route 
         path = "/admin"
         render = {props =>{
