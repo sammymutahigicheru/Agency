@@ -7,15 +7,15 @@ import rootReducer from './store/reducers';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
-
-const store = createStore(
-  rootReducer,
-  applyMiddleware(thunk)
-  );
+import {store,persistor} from './store/ConfigureStore';
+import {PersistGate} from 'redux-persist/integration/react';
 
 ReactDOM.render(
     <Provider store={store} >
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
+      
     </Provider>,
   document.getElementById('root')
 );
