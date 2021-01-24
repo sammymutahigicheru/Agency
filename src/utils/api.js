@@ -7,6 +7,13 @@ const API = {
         .then(res => {
             success(res);
         })
+    },
+    getUsers: (token,success) =>{
+        axios.get(`${host}/api/users/access_token=${token}`)
+        .then(res =>{
+            success(res);
+        })
+
     }
 }
 export default API;
