@@ -99,7 +99,7 @@ class AdminWrapper extends Component{
         const {classes} = this.props;
         return(
             <div id="admin-page" className={classes.root}>
-                <AppBar className={classNames(classes.appBar,this.state.open && classes.appBarShift)}>
+                <AppBar className={classNames(classes.appBar,this.state.open && classes.appBarShift)}  position="fixed">
                     <Toolbar className= {classes.toolbar} >
                         <IconButton onClick = {this.handleDrawerOpen}>
                             <MenuIcon>
