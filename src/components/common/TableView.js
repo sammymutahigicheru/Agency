@@ -18,7 +18,7 @@ class TableView extends Component{
                             {columns ?
                                 columns.map((col,i) =>{
                                     return(
-                                        <TableCell key={i}>{col.lable}</TableCell>
+                                        <TableCell key={i}>{col.label}</TableCell>
                                     )
                                 })
                             : null}
@@ -29,8 +29,8 @@ class TableView extends Component{
                             rows.map((row,i) =>{
                                return columns.map((col,colIndex) => {
                                     return (
-                                        <TableCell>
-                                            {}
+                                        <TableCell key={colIndex}>
+                                            {row[col.name]}
                                         </TableCell>
                                     )
                                 })

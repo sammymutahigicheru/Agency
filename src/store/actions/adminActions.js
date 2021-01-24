@@ -12,3 +12,13 @@ export const getUsers = (token) =>{
         })
     }
 }
+export const getPosts = (token) =>{
+    return (dispatch) =>{
+        API.getPosts(token,res =>{
+           dispatch({
+               type: 'GOT_POSTS',
+               payload: res.data
+           }) 
+        })
+    }
+}
