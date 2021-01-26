@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import configureStore from './store/ConfigureStore';
+
 const {store,persistor} = configureStore();
 
 ReactDOM.render(
